@@ -13,6 +13,12 @@ readonly COPY_CONCURRENCY=${COPY_CONCURRENCY:-10}
 readonly TILE_TIMEOUT=${TILE_TIMEOUT:-1800000}
 readonly MBTILES_NAME=${MBTILES_NAME:-tiles.mbtiles}
 
+echo "-------------------------------------------------------------------------------------"
+echo "====> : Important variables for generating tiles: "
+echo "      : MIN_ZOOM             : $MIN_ZOOM "
+echo "      : MAX_ZOOM             : $MAX_ZOOM "
+echo "      : BBOX                 : $BBOX "
+
 function export_local_mbtiles() {
     exec tilelive-copy \
         --scheme=pyramid \
